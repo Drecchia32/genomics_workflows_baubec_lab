@@ -11,6 +11,11 @@
 ## Activate the nextflow environment
 source activate /hpc/local/CentOS7/uu_epigenetics/SOFT/miniconda3/envs/nextflow
 
+
+## Make the output dir
+mkdir -p ./nextflow_output
+
+
 ## Make new CACHEDIR and TMPDIR for Singularity in the project dir.
 ## By default, these temporary dirs will be written to the compute node, but there probably isn't enough space for them there.
 ## Rather than putting these tmp dirs in the project dir, they could also be written to scratch or one of the global tmp dirs on the hpc.
@@ -26,8 +31,8 @@ nextflow run nf-core/rnaseq \
 -r 3.12.0 \
 -profile singularity \
 --outdir ./nextflow_output \
--c ./resources.rnaseq.config  \
---input ./sample_sheet_xDR026.csv \
+-c ./resources_rnaseq.config  \
+--input ./sample_sheet_rnaseq.csv \
 --trimmer trimgalore \
 --aligner star_salmon  \
 --fasta /hpc/shared/uu_epigenetics/davide/annotations/aws_iGenomes/references/Mus_musculus/UCSC/mm10/Sequence/WholeGenomeFasta/genome.fa \
