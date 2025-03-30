@@ -39,5 +39,3 @@ nextflow run nf-core/rnaseq \
 --gtf /hpc/shared/uu_epigenetics/davide/annotations/aws_iGenomes/references/Mus_musculus/UCSC/mm10/Annotation/Genes/genes.gtf \
 --gene_bed /hpc/shared/uu_epigenetics/davide/annotations/aws_iGenomes/references/Mus_musculus/UCSC/mm10/Annotation/Genes/genes.bed \
 ##-resume
-
-
