@@ -1,0 +1,2 @@
+test_file1_R1_001.fastq.gz
+test_file2_R1_001.fastq.gz
